@@ -1,7 +1,7 @@
 package com.example.toukougetsu.queuesample.task;
 
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.PriorityBlockingQueue;
 
 public class TaskQueue {
 
@@ -10,7 +10,7 @@ public class TaskQueue {
     private TaskExecutor[] mTaskExecutors;
 
     public TaskQueue(int size) {
-        mTaskQueue = new LinkedBlockingDeque<>();
+        mTaskQueue = new PriorityBlockingQueue<>();
         mTaskExecutors = new TaskExecutor[size];
     }
 

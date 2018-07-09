@@ -1,5 +1,6 @@
 package com.example.toukougetsu.queuesample.task;
 
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 public class PrintTask implements ITask {
@@ -20,5 +21,20 @@ public class PrintTask implements ITask {
         }
 
         Log.d("Queue", "my id is ===> " + id);
+    }
+
+    @Override
+    public void setPriority(Priority priority) {
+
+    }
+
+    @Override
+    public Priority getPriority() {
+        return null;
+    }
+
+    @Override
+    public int compareTo(@NonNull ITask iTask) {
+        return 0;
     }
 }
